@@ -10,15 +10,16 @@ const getSum = () => {
 		let val = parseFloat(price.innerText);
 		sum+=val;
 	}
- //    if(document.querySelector(".newRow")){
-	// 	document.querySelector(".newRow").remove();
-	// }
+    if(document.querySelector(".newRow")){
+		document.querySelector(".newRow").remove();
+	}
 	
 	let row=document.createElement('tr');
 	row.className="newRow";
-		// let tdd=document.createElement('td');
-	row.innerText=sum;
-	// row.append(tdd);
+		let tdd=document.createElement('td');
+	tdd.id="ans";
+	tdd.innerText=sum;
+	row.append(tdd);
 	
    document.querySelector("table").append(row);
 	
